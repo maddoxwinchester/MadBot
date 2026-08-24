@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy &middot; MadBot Extensions</title>
+<meta name="description" content="Privacy policy for MadBot Extensions, including Roblox Trade Finder." />
+<script>
+  (function () {
+    try {
+      var saved = localStorage.getItem('mb-theme');
+      var wantsDark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (wantsDark) document.documentElement.classList.add('dark');
+    } catch (e) {}
+  })();
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          ink: { 950: '#07090f', 900: '#0c0f18', 800: '#141826', 700: '#1c2233' },
+          ember: { 400: '#ff8a5c', 500: '#ff6a3d', 600: '#ea5a2c' },
+          sync: { 400: '#7dd3fc', 500: '#38bdf8' },
+        },
+      },
+    },
+  };
+</script>
+</head>
+<body>
+<div class="bg-white text-ink-900 dark:bg-ink-950 dark:text-slate-100 antialiased min-h-screen">
+
+<header class="sticky top-0 z-50 backdrop-blur bg-white/80 dark:bg-ink-950/80 border-b border-black/5 dark:border-white/10">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-2 font-semibold text-base sm:text-lg shrink-0">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="3" y="3" width="26" height="26" rx="8" stroke="url(#g1)" stroke-width="2"/>
+        <circle cx="12.5" cy="14" r="2.1" fill="#38bdf8"/>
+        <circle cx="19.5" cy="14" r="2.1" fill="#38bdf8"/>
+        <path d="M11 20c1.2 1.4 2.9 2.1 5 2.1s3.8-.7 5-2.1" stroke="#ff6a3d" stroke-width="2" stroke-linecap="round"/>
+        <defs><linearGradient id="g1" x1="2" y1="2" x2="30" y2="30"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#ff6a3d"/></linearGradient></defs>
+      </svg>
+      <span>MadBot Extensions</span>
+    </a>
+    <a href="index.html" class="text-sm font-medium text-ink-700 dark:text-slate-300 hover:text-ember-600 dark:hover:text-ember-400 transition-colors">&larr; Back</a>
+  </div>
+</header>
+
+<main class="max-w-3xl mx-auto px-4 sm:px-6 py-14 sm:py-20">
+  <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-ink-950 dark:text-white">Privacy Policy</h1>
+  <p class="mt-2 text-sm text-ink-500 dark:text-slate-400">Last updated: August 24, 2026</p>
+
+  <div class="mt-10 space-y-8 text-ink-700 dark:text-slate-300 leading-relaxed">
+    <section>
+      <h2 class="text-lg font-semibold text-ink-950 dark:text-white">Overview</h2>
+      <p class="mt-2">MadBot Extensions is a one-person project building lightweight Chrome extensions, including Roblox Trade Finder. This page explains what data these extensions handle and what they don't.</p>
+    </section>
+
+    <section>
+      <h2 class="text-lg font-semibold text-ink-950 dark:text-white">What we don't do</h2>
+      <p class="mt-2">No analytics, no tracking pixels or scripts, no ad networks, and no selling or sharing of your data with anyone. There's no company behind this and no server that collects your personal information &mdash; there isn't a backend at all beyond the extension itself.</p>
+    </section>
+
+    <section>
+      <h2 class="text-lg font-semibold text-ink-950 dark:text-white">Roblox Trade Finder</h2>
+      <p class="mt-2"><strong class="text-ink-900 dark:text-white">Account &amp; inventory data.</strong> The extension reads public Roblox data (your inventory, trade info, friends/followers, account age) directly from Roblox's own public web APIs, using your browser's existing logged-in Roblox session &mdash; the same way the roblox.com site itself works. It also reads public item values from Rolimons' public API. Both happen directly between your browser and Roblox/Rolimons; nothing passes through a server we operate.</p>
+      <p class="mt-2"><strong class="text-ink-900 dark:text-white">Local storage.</strong> Search settings, selected items, and match history are stored locally on your device using Chrome's own <code class="text-xs bg-black/5 dark:bg-white/10 rounded px-1 py-0.5">chrome.storage.local</code>. We have no access to it, and it never leaves your device except to Roblox/Rolimons as described above.</p>
+      <p class="mt-2"><strong class="text-ink-900 dark:text-white">The debugger permission.</strong> Used only on Roblox's own trade page, only for the Pro auto-fill feature, to send real click and type events that fill in the trade offer for you. This is a technical requirement because Roblox's trade page ignores script-simulated clicks. It attaches and detaches automatically around each action (you'll see Chrome's own "being debugged" banner while it's active), and is never used to read, log, capture, or transmit anything from the page.</p>
+    </section>
+
+    <section>
+      <h2 class="text-lg font-semibold text-ink-950 dark:text-white">Payments</h2>
+      <p class="mt-2">Pro purchases are handled entirely by <a href="https://extensionpay.com" target="_blank" rel="noopener" class="text-ember-600 dark:text-ember-400 underline">ExtensionPay</a>, which uses Stripe for payment processing. We never see or store your card details. ExtensionPay/Stripe may collect your email address to associate a purchase with your license &mdash; see <a href="https://extensionpay.com/privacy" target="_blank" rel="noopener" class="text-ember-600 dark:text-ember-400 underline">ExtensionPay's privacy policy</a> and <a href="https://stripe.com/privacy" target="_blank" rel="noopener" class="text-ember-600 dark:text-ember-400 underline">Stripe's privacy policy</a> for how they handle that.</p>
+    </section>
+
+    <section>
+      <h2 class="text-lg font-semibold text-ink-950 dark:text-white">Changes</h2>
+      <p class="mt-2">If anything material changes, this page will be updated and the date above will change.</p>
+    </section>
+
+    <section>
+      <h2 class="text-lg font-semibold text-ink-950 dark:text-white">Contact</h2>
+      <p class="mt-2">Questions about this policy: <a href="mailto:maddoxrobot@gmail.com" class="text-ember-600 dark:text-ember-400 underline">maddoxrobot@gmail.com</a></p>
+    </section>
+  </div>
+</main>
+
+</div>
+</body>
+</html>
